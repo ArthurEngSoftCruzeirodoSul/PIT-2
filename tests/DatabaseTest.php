@@ -6,7 +6,7 @@ class DatabaseTest extends TestCase
 {
     public function testBancoDeDadosConectado()
     {
-        $dsn = 'mysql:host=127.0.0.1;dbname=database;charset=utf8mb4'; // Substitua pelo seu banco de dados
+        $dsn = 'mysql:host=;dbname=database;charset=utf8mb4'; // Substitua pelo seu banco de dados
         $dbUser = 'root';
         $dbPassword = '';
 

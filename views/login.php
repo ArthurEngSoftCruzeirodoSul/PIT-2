@@ -60,7 +60,11 @@ require_once __DIR__ . '/../routes.php';  // Define as rotas da aplicação
 
       <!-- Link para recuperação de senha caso o usuário tenha esquecido -->
       <div class="text-right">
+<<<<<<< HEAD
         <a href="<?= BASE_URL ?>/views/recuperarSenha.php" class="text-red-600 text-sm">Esqueci minha senha</a>
+=======
+        <a href="<?= BASE_URL ?>recuperarSenha.php" class="text-red-600 text-sm">Esqueci minha senha</a>
+>>>>>>> 41ba1ca (PIT 2)
       </div>
 
       <!-- Links de navegação e botão de login -->

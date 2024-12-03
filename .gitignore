@@ -20,6 +20,11 @@ Thumbs.db        # Para Windows
 .env           # Se usar um arquivo .env para variáveis de ambiente
 *.sqlite       # Arquivos de banco de dados SQLite (se não for para versionar)
 *.sqlite3
+<<<<<<< HEAD
+=======
+config.php
+DatabaseTest.php
+>>>>>>> 41ba1ca (PIT 2)
 # Ignorar diretórios e arquivos de build ou distribuição
 /build/
 dist/

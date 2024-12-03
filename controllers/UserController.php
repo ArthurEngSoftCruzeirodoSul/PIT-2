@@ -71,7 +71,6 @@ class UserController
         }
     }
 
-
     /**
      * Método para autenticar um usuário.
      * 
@@ -105,6 +104,7 @@ class UserController
         if (!password_verify($data['password'], $user['senha_hash'])) {
             return ['error' => 'Senha incorreta.'];
         }
+<<<<<<< HEAD
 
         // Armazena os dados do usuário na sessão
         $_SESSION['user_id'] = $user['id'];
@@ -118,6 +118,17 @@ class UserController
         }
 
         return ['success' => true, 'message' => 'Login realizado com sucesso!'];
+=======
+        // Se estiver em modo de teste, evita o redirecionamento real
+        if ($testMode) {
+            return ['success' => 'Login realizado com sucesso!'];
+        }
+
+        // Em vez de redirecionar com header(), incluímos o conteúdo de vitrineCupcakes.php
+        require __DIR__ . '/vitrineCupcakes.php';
+        exit;
+
+>>>>>>> 41ba1ca (PIT 2)
     }
     /**
      * Método para atualizar as informações do perfil de um usuário.

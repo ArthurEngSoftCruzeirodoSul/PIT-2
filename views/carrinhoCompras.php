@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 // Inclui os arquivos de configuração e rotas para o funcionamento do sistema.
 require_once __DIR__ . '/../config.php'; // Carrega as configurações do banco de dados, entre outros.
 require_once __DIR__ . '/../routes.php'; // Carrega as rotas definidas no sistema.
 ?>
+=======
+>>>>>>> 41ba1ca (PIT 2)
 <!DOCTYPE html>
 <html lang="pt-BR">
 

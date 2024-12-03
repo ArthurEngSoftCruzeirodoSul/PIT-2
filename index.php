@@ -28,7 +28,11 @@ $cartaoController = new CartaoController($db, $cartaoModel);
 // Determina a ação atual com base no parâmetro 'action' da URL (padrão: 'login')
 $action = isset($_GET['action']) ? $_GET['action'] : 'login';
 
+<<<<<<< HEAD
 // Processa requisições POST (formulários de registro, login, perfil, e cartão)
+=======
+// Processamento do cadastro ou login via 
+>>>>>>> 41ba1ca (PIT 2)
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     switch ($action) {
         case 'register':
@@ -39,6 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 die('Erro: Cabeçalhos já foram enviados.');
             }
 
+<<<<<<< HEAD
             if ($result['success']) {
                 header('Location: ' . BASE_URL . 'views/login.php');
                 exit;
@@ -111,5 +116,33 @@ switch ($action) {
     default:
         require __DIR__ . '/views/login.php';
         break;
+=======
+        // Armazena a mensagem de sucesso ou erro na sessão
+        $_SESSION['message'] = $result['message'];
+
+        // Redireciona para a página de login ou para o cadastro novamente, caso haja erro
+        if ($result['success']) {
+            require __DIR__ . '/views/login.php';
+            exit;
+        } else {
+            require __DIR__ . '/views/cadastro.php';
+        }
+        
+    } elseif ($action === 'addCartao') {
+        // Processamento de dados do cartão
+        $usuario_id = $_POST['usuario_id']; // Aqui você pode pegar o ID do usuário logado
+        $result = $cartaoController->saveCartao($_POST, $usuario_id);
+
+        // Armazena a mensagem de sucesso ou erro na sessão
+        $_SESSION['message'] = $result['message'];
+    }
+}
+
+// Carrega a página correspondente (registro ou login ou outra)
+if ($action === 'register') {
+    require __DIR__ . '/views/cadastro.php';
+} else {
+    require __DIR__ . '/views/login.php';
+>>>>>>> 41ba1ca (PIT 2)
 }
 ?>
