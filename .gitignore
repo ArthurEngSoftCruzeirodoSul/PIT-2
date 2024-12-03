@@ -1,0 +1,34 @@
+# Ignorar arquivos e diretórios específicos do Composer
+/vendor/
+/composer.lock
+
+# Ignorar arquivos e pastas de cache do PHPUnit
+.phpunit.result.cache
+
+# Ignorar arquivos gerados pelo sistema operacional
+.DS_Store        # Para macOS
+Thumbs.db        # Para Windows
+
+# Ignorar arquivos de log
+*.log
+
+# Ignorar diretórios e arquivos temporários
+/tmp/
+/*.tmp
+
+# Ignorar arquivos de configuração local (exemplo: bancos de dados locais)
+.env           # Se usar um arquivo .env para variáveis de ambiente
+*.sqlite       # Arquivos de banco de dados SQLite (se não for para versionar)
+*.sqlite3
+# Ignorar diretórios e arquivos de build ou distribuição
+/build/
+dist/
+*.phar
+
+# Ignorar arquivos específicos de IDEs
+/.idea/        # Para PhpStorm, WebStorm, etc.
+.vscode/       # Para Visual Studio Code
+
+# Ignorar arquivos específicos de sistema de controle de versão local
+*.swp          # Arquivos temporários do Vim
+*.swo          # Arquivos temporários do Vim
